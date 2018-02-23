@@ -1,0 +1,108 @@
+*{margin: 0; padding: 0;}
+body{
+    font-family: sans-serif;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+#main_header{
+    height: 45px;
+    background-image: url(../images/header_background.png);
+    position: relative;
+}
+
+#main_header h1{
+    text-align: center;
+    color: #131313;
+}
+.left,.right{
+    position: absolute;
+    height: 32px;
+    display: block;
+    
+}
+.left{
+    width: 62px;
+    left: 5px; top:7px;
+    background: url(../images/css_sprites.png);
+    background-position: 0 0;
+    text-indent: -999px;
+}
+.right{
+    width: 32px;
+    right: 5px; top:7px;
+    background: url(../images/css_sprites.png);
+    background-position: -62px -0;
+    text-indent: -999px;
+}
+/*토글 기능 +인접형제 선택자 사용*/
+#toggle + #wrap > #toggle_gnb_wrap{
+    display: none;
+}
+#toggle:checked + #wrap > #toggle_gnb_wrap{
+    display: block;
+}
+#toggle{display: none;}
+/*토글 목록 디자인*/
+#toggle_gnb{
+    background: #fff;
+}
+#toggle_gnb_wrap{
+    background: #363636;
+    padding: 15px;
+}
+/*상단 메인메뉴*/
+#top_gnb{
+    background: #b42111;
+    border-bottom: 1px solid black;
+    overflow: hidden;
+}
+#top_gnb > div{
+    float: left;
+    width: 25%;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;/*수직정렬*/
+    
+}
+#top_gnb > div > a{
+    display: block;
+    color: white;
+}
+#bottom_gnb{
+    display: table;/*테이블 모드로 변경*/
+    width: 100%;
+    
+}
+#bottom_gnb > div{
+    display: table-cell;
+}
+#bottom_gnb > div > a{
+    display: block;
+    height: 35px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    line-height: 35px;
+}
+#main_section > h1{
+    color: black;
+    
+}
+#main_saction{
+    padding: 15px;
+}
+#main_saction p{
+    margin: 10px 0 20px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+#main_footer{
+    text-align: center;
+    background: #555;
+    color: white;
+    padding: 20px 0;
+}
+
